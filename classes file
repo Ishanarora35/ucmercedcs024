@@ -1,0 +1,37 @@
+// bank account class
+#include <iostream>
+using namespace std;
+class Bank{
+    private:
+    double balance;
+    string name;
+    public:
+    Bank(double b, string n) { // idk why im making the error but when u take something in you assign that to something right, remember that
+        balance = b;
+        name = n;
+    }
+    double deposit(double x) {
+       balance = balance + x;
+        return balance;
+    }
+    double withdraw(double x) {
+        balance = balance - x;
+        return balance;
+    }
+    double gb() {
+        return balance;
+    }
+    ~Bank() { // deconstructor, you don't actually have to run it, the compiler does it for you
+        cout << "you are no longer our customer" << endl;
+    }
+};
+int main () {
+Bank ishan(100.32, "ishan");
+cout << ishan.gb() << endl;
+cout << ishan.deposit(210) << endl;
+cout << ishan.gb() << endl;
+cout << ishan.withdraw(310.32) << endl;
+cout << ishan.gb() << endl;
+
+
+}
