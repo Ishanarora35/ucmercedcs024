@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class battery {
@@ -6,9 +7,9 @@ class battery {
     int charge;
     string label;
     public:
-    battery(){
+    battery(string l){
         charge = 100;
-        label = "Unnamed";
+        label = l;
     }
     battery(string l, int c) {
         charge = c;
@@ -29,10 +30,12 @@ class battery {
     void drain(int a) {
         if (0 < a && a <= charge){
             charge -= a;
+        } else {
+            cout << "bad drain" << endl;
         }
     }
     ~battery () {
-        cout << "<" << label << ">" << "removed" << endl;
+        cout << "<" << label << "> removed" << endl;
     }
 };
 
@@ -41,7 +44,7 @@ int main(){
 
 battery ishan("ishan", 32);
 ishan.drain(1);
-cout << ishan.getc();
+cout << ishan.getch();
 
 
 
