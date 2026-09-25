@@ -15,7 +15,7 @@ class garage {
   }
   garage(int c) {
       cars = 0;
-      capacity - c;
+      capacity = c;
   }
   int getcars() const {
       return cars;
