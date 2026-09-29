@@ -1,3 +1,7 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
 class book {
     private:
     string title;
@@ -7,19 +11,23 @@ class book {
         title = "Untitled";
         page = 0;
     }
-    book(string n, int p) {
-        title = n;
-        page = p;
+    book(string title, int page) {
+            this->title = title;
+            this->page = page;
     }
-string gettitle() const {
+string get() const {
     return title;
 }
 int getpage() const {
     return page;
 }
-void addpage(int x) {
-    if (x > 0) {
-        page += x;
-    }
-}
+
+
 };
+
+int main () {
+    book jess("fuck", 67);
+   cout << jess.getpage() << endl;
+   cout << jess.get() << endl;
+    
+}
