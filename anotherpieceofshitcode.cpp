@@ -4,9 +4,9 @@ using namespace std;
 struct person {
   string n;
   int a;
-  person (string na, int ag) {
-      n = na;
-      a = ag;
+  person (string n, int a) {
+      this->n = n;
+      this->a = a;
   }
 };
 
