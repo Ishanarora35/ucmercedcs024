@@ -17,9 +17,9 @@ class elevator {
     
 
     // ask question about this code, if i can just do this for the quiz
-    elevator(int c, int m) {
-        curf = c;
-        maxf = m;
+    elevator(int curf, int maxf) {
+        this->curf = curf;
+        this->maxf = mmaxf;
     }
 
     
